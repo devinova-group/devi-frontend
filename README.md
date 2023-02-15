@@ -1,94 +1,54 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  gatsby-starter-typescript-plus
+  Gatsby minimal TypeScript starter
 </h1>
-
-> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
-
-This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
-
-## 🗒️ Features
-
-- TypeScript
-- ESLint (with custom ESLint rules)
-- Markdown rendering with Remark
-- Basic component structure
-- Styling with [emotion](https://emotion.sh/)
 
 ## 🚀 Quick start
 
-> A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
-
 1.  **Create a Gatsby site.**
 
-    Install `gatsby-cli` package globally on your machine.
+    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
 
-    ```bash
-    # using NPM
-    npm install -g gatsby-cli
-
-    # using YARN
-    yarn global add gatsby-cli
-    ```
-
-    Use the `gatsby-cli` to create a new site and install its dependencies.
-
-    ```bash
-    gatsby new project-name https://github.com/resir014/gatsby-starter-typescript-plus
+    ```shell
+    # create a new Gatsby site using the minimal TypeScript starter
+    npm init gatsby
     ```
 
 2.  **Start developing.**
 
-    Move to project's directory.
+    Navigate into your new site’s directory and start it up.
 
-    ```bash
-    cd project-name/
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
     ```
 
-    Start your site.
+3.  **Open the code and start customizing!**
 
-    ```bash
-    # using npm
-    npm start
+    Your site is now running at http://localhost:8000!
 
-    # using yarn
-    yarn start
-    ```
+    Edit `src/pages/index.tsx` to see your site update in real-time!
 
-    Open source code using your favorite IDE/Text editor and navigate to `src/` directory, this is where your application live.
+4.  **Learn more**
 
-3.  **Build your application for production.**
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-    Once you're finished, you can make production build of your app using:
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-    ```bash
-    # using npm
-    npm run build
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-    # using yarn
-    yarn build
-    ```
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-4.  **Deploy your app to Github pages!**
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-    After building your application in step 3, you're ready to publish your app and go online!
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-    ```bash
-    # using npm
-    npm run deploy
+## 🚀 Quick start (Gatsby Cloud)
 
-    # using yarn
-    yarn deploy
-    ```
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-## ❤️ Credits
-
-Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)

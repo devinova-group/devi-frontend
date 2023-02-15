@@ -1,21 +1,40 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from "react";
+import {graphql, HeadFC, PageProps, useStaticQuery} from "gatsby";
 
-import Page from '../components/Page'
-import Container from '../components/Container'
-import IndexLayout from '../layouts'
+interface PageData {
+  allStrapiTest: {
+    nodes: [
+      {
+        title: string;
+      }
+    ];
+  };
+}
 
-const IndexPage = () => (
-  <IndexLayout>
-    <Page>
-      <Container>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
-      </Container>
-    </Page>
-  </IndexLayout>
-)
+const IndexPage: React.FC<PageProps> = () => {
+  const data: PageData = useStaticQuery(
+    graphql`
+      query {
+        allStrapiTest {
+          nodes {
+            title
+          }
+        }
+      }
+    `
+  );
+  console.log(data);
 
-export default IndexPage
+  return (
+    <div>
+      <h1>Strapi blog</h1>
+      {data.allStrapiTest.nodes.map((item) => {
+        return <h2>{item.title}</h2>;
+      })}
+    </div>
+  );
+};
+
+export default IndexPage;
+
+export const Head: HeadFC = () => <title>Home Page</title>;
