@@ -7,7 +7,7 @@ require("dotenv").config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ["test"],
+  collectionTypes: ["test", "Content"],
   singleTypes: ["global"],
   remoteFileHeaders: {
     /**
@@ -28,11 +28,19 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    "gatsby-plugin-theme-ui",
     {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
     },
-    "gatsby-plugin-theme-ui",
+    // {
+    //   resolve: "gatsby-plugin-react-svg",
+    //   options: {
+    //     rule: {
+    //       include: /assets/,
+    //     },
+    //   },
+    // },
   ],
 };
 

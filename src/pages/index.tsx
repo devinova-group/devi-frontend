@@ -1,5 +1,6 @@
 import * as React from "react";
 import {graphql, HeadFC, PageProps, useStaticQuery} from "gatsby";
+import Button from "../library/Button";
 
 interface PageData {
   allStrapiTest: {
@@ -28,9 +29,10 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <div>
       <h1>Strapi blog</h1>
-      {data.allStrapiTest.nodes.map((item) => {
-        return <h2>{item.title}</h2>;
+      {data.allStrapiTest.nodes.map((item, i) => {
+        return <h2 key={i}>{item.title}</h2>;
       })}
+      <Button>testing</Button>
     </div>
   );
 };
