@@ -1,4 +1,4 @@
-import { Theme } from "theme-ui";
+import {Theme} from "theme-ui";
 
 const cards: Theme["cards"] = {
   primary: {
@@ -7,12 +7,12 @@ const cards: Theme["cards"] = {
     display: "flex",
     flexDirection: "column",
     gap: 3,
-    backgroundColor: "default.surfaces",
+    backgroundColor: "neutral.0",
     textAlign: "left",
     boxShadow: "card",
     borderRadius: "20px",
     margin: 10,
-    color: "default.text",
+    color: "neutral.7",
     img: {
       width: "353px",
       height: "316px",

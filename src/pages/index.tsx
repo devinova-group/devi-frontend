@@ -1,36 +1,43 @@
 import * as React from "react";
 import {graphql, HeadFC, PageProps, useStaticQuery} from "gatsby";
 import Button from "../library/Button";
+import {Switch, useColorMode} from "theme-ui";
 
 interface PageData {
-  allStrapiTest: {
+  allStrapiContent: {
     nodes: [
       {
-        title: string;
+        Heading: string;
       }
     ];
   };
 }
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [mode, setMode] = useColorMode();
+
   const data: PageData = useStaticQuery(
     graphql`
       query {
-        allStrapiTest {
+        allStrapiContent {
           nodes {
-            title
+            Heading
           }
         }
       }
     `
   );
-  console.log(data);
 
   return (
     <div>
+      <Switch
+        onClick={() => {
+          setMode(mode === "dark" ? "default" : "dark");
+        }}
+      ></Switch>
       <h1>Strapi blog</h1>
-      {data.allStrapiTest.nodes.map((item, i) => {
-        return <h2 key={i}>{item.title}</h2>;
+      {data.allStrapiContent.nodes.map((item, i) => {
+        return <h2 key={i}>{item.Heading}</h2>;
       })}
       <Button>testing</Button>
     </div>

@@ -1,4 +1,4 @@
-import { Theme } from "theme-ui";
+import {Theme} from "theme-ui";
 
 const badges: Theme["badges"] = {
   primary: {
@@ -43,8 +43,8 @@ const badges: Theme["badges"] = {
     variant: "badges.primary",
     width: "65px",
     color: "white",
-    backgroundColor: "default.secondary",
-    borderColor: "default.white",
+    backgroundColor: "secondary",
+    borderColor: "white",
   },
   selected: {
     variant: "badges.primary",
@@ -57,7 +57,7 @@ const badges: Theme["badges"] = {
     variant: "badges.primary",
     width: "87px",
     color: "badge.secondary",
-    backgroundColor: "default.secondary",
+    backgroundColor: "secondary",
     borderColor: "rgba(255, 255, 255, 0.1)",
   },
 };

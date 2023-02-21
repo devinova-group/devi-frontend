@@ -1,4 +1,4 @@
-import { Theme } from "theme-ui";
+import {Theme} from "theme-ui";
 
 const buttons: Theme["buttons"] = {
   primary: {
@@ -9,7 +9,7 @@ const buttons: Theme["buttons"] = {
       fontStyle: "normal",
       fontSize: 5,
       cursor: "pointer",
-      backgroundColor: "default.primary",
+      backgroundColor: "primary.0",
       boxShadow: "button",
       borderRadius: "8px",
       margin: 2,
@@ -17,23 +17,23 @@ const buttons: Theme["buttons"] = {
 
       "&:hover": {
         backgroundColor: "transparent",
-        color: "default.primary",
+        color: "primary.0",
         border: "default",
-        borderColor: "default.primary",
+        borderColor: "primary.0",
       },
       "&:disabled": {
-        backgroundColor: "default.primary",
+        backgroundColor: "primary.4",
         color: "#938ca3",
         "&:hover": {
           cursor: "not-allowed",
           backgroundColor: "none",
           /* color: "none", */
-          border: "default.otherColors.darkGreyShades.1",
+          border: "otherColors.darkGreyShades.1",
           borderColor: "none",
         },
       },
       "&:focus": {
-        backgroundColor: "default.secondary",
+        backgroundColor: "primary.3",
         color: "white",
       },
     },
@@ -60,10 +60,10 @@ const buttons: Theme["buttons"] = {
         backgroundColor: "transparent",
         color: "button.error",
         border: "default",
-        borderColor: "button.errors",
+        borderColor: "button.error",
       },
       "&:focus": {
-        backgroundColor: "button.errors",
+        backgroundColor: "button.error",
         color: "white",
       },
       "&:disabled": {
@@ -113,7 +113,7 @@ const buttons: Theme["buttons"] = {
           backgroundColor: "none",
           border: "none",
           borderColor: "none",
-          color: "default.white",
+          color: "white",
         },
       },
     },
@@ -192,7 +192,7 @@ const buttons: Theme["buttons"] = {
     boxShadow: "button",
     fontSize: 5,
     borderRadius: "6px",
-    backgroundColor: "default.primary",
+    backgroundColor: "primary",
   },
   login: {
     variant: "buttons.primary",

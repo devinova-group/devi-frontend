@@ -2,7 +2,7 @@ const checkbox: any = {
   width: "24px",
   height: "24px",
   border: "default",
-  borderColor: "default.secondary",
+  borderColor: "secondary.4",
   boxShadow: "radio",
   fill: "none",
 

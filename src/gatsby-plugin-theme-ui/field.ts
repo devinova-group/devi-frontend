@@ -7,7 +7,7 @@ const field: any = {
     boxShadow: "field",
     borderRadius: "6px",
     background: "field.background",
-    backgroundColor: "default.surfaces",
+    backgroundColor: "neutral.0",
     margin: 10,
     textIndent: "32px",
     "&::placeholder": {

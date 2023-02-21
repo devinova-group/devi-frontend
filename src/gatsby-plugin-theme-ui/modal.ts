@@ -1,4 +1,4 @@
-import { Theme } from "theme-ui";
+import {Theme} from "theme-ui";
 
 const modal = {
   large: {
@@ -6,7 +6,7 @@ const modal = {
     width: ["400px", "450px", "650px"],
     borderRadius: "corner",
     boxShadow: "modal",
-    background: "default.white",
+    background: "white",
     header: {
       margin: 3,
       fontSize: [1, 2, 3],
