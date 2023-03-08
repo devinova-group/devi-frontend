@@ -7,8 +7,8 @@ require("dotenv").config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ["partner", "content"],
-  singleTypes: ["Footer", "Header", "seo"],
+  collectionTypes: ["content", "partner", "page", "navitem", "service"],
+  singleTypes: ["footer", "header", "seo"],
   remoteFileHeaders: {
     /**
      * Customized request headers
@@ -33,14 +33,9 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
     },
-    // {
-    //   resolve: "gatsby-plugin-react-svg",
-    //   options: {
-    //     rule: {
-    //       include: /assets/,
-    //     },
-    //   },
-    // },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
 
