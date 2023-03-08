@@ -55,6 +55,10 @@ const colors: Theme["colors"] = {
   warning: ["#EEAD44", "#CB8B3A", "#B47B33", "#9E6C2D", "#5C3C14"],
   notification: ["#3183C8", "#2769A0", "#1D4F78", "#194264", "#0F2B43"],
   information: ["#6B798A", "#5F6B7A", "#555B68", "#414244", "#343537"],
+  services: {
+    bordershadow: "#CACFD9",
+    background: "#EDF0F7",
+  },
   button: {
     error: "#C12945",
     errorDisabled: "#E094A2",
@@ -123,13 +127,17 @@ const colors: Theme["colors"] = {
         "#F1F3F9",
         "#F8F9FC",
       ],
-      primary: ["#A77CF4", "#C0A1F7", "#D4BFF9", "#E0D0FB", "#DFDAF0"],
+      primary: ["#9E8BEB", "#AB9BEE", "#B6A8F0", "#D2C9F8", "#E2DEF2"],
       secondary: ["#41C2B7", "#67CEC5", "#97DED8", "#BDEAE6", "#E3F6F4"],
       success: ["#17DE67", "#88D3A6", "#A6DEBC", "#B6E7CA", "#CFF2D6"],
       error: ["#FF4C50", "#F2787A", "#EC999C", "#F8CDCE", "#F5DADA"],
       warning: ["#FFB65C", "#FFBB63", "#FFCA86", "#FBDEA7", "#FDEDCE"],
       notification: ["#64B8FF", "#7BBDF4", "#91C7F3", "#A6D5FC", "#D1EAFF"],
       information: ["#8597AD", "#AAB7C6", "#B6C1CE", "#C8D0DA", "#DBE0E7"],
+      services: {
+        bordershadow: "#161719",
+        background: "#2B303A",
+      },
       button: {
         error: "#C12945",
         errorDisabled: "#9A4454",

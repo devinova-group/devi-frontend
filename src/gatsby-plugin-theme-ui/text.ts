@@ -1,139 +1,83 @@
-import { Theme } from "theme-ui";
+import {Theme} from "theme-ui";
 
 const text: Theme["text"] = {
-  display: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.0",
-      fontSize: 5,
-      letterSpacing: 0,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.2",
-      fontSize: 5,
-      letterSpacing: 0,
-    },
+  H1: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 10,
+    lineHeight: 6,
   },
-  title1: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.1",
-      fontSize: 5,
-      letterSpacing: 1,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.3",
-      fontSize: 5,
-      letterSpacing: 1,
-    },
+  H2: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 9,
+    lineHeight: 5,
   },
-  title2: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.2",
-      fontSize: 3,
-      letterSpacing: 1,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.3",
-      fontSize: 3,
-      letterSpacing: 1,
-    },
+  H3: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 8,
+    lineHeight: 4,
   },
-  subHead: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.2",
-      fontSize: 3,
-      letterSpacing: 0,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.3",
-      fontSize: 3,
-      letterSpacing: 0,
-    },
+  H4: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 7,
+    lineHeight: 3,
   },
-  body1: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.1",
-      fontSize: 2,
-      letterSpacing: "0px",
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.2",
-      fontSize: 2,
-      letterSpacing: "0px",
-    },
+  H5: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 6,
+    lineHeight: 2,
   },
-  body2: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.1",
-      fontSize: 0,
-      letterSpacing: 0,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.2",
-      fontSize: 0,
-      letterSpacing: "0px",
-    },
+  H6: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 5,
+    lineHeight: 1,
   },
-  body3: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.1",
-      fontSize: 2,
-      letterSpacing: "0px",
-    },
+  Subhead: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 3,
+    lineHeight: 1,
   },
-  caption: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.1",
-      fontSize: 2,
-      letterSpacing: 0,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.2",
-      fontSize: 2,
-      letterSpacing: 0,
-    },
+  Body1: {
+    fontFamily: "0",
+    fontWeight: "1",
+    fontSize: 3,
+    lineHeight: 1,
   },
-  button: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.3",
-      fontSize: 5,
-      letterSpacing: 0,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.3",
-      fontSize: 4,
-      letterSpacing: "0px",
-    },
+  Body2: {
+    fontFamily: "0",
+    fontWeight: "1",
+    fontSize: 2,
+    lineHeight: 1,
   },
-  overline: {
-    notoSans: {
-      fontFamily: "body.0",
-      fontWeight: "body.2",
-      fontSize: 1,
-      letterSpacing: 3,
-    },
-    quicksand: {
-      fontFamily: "body.1",
-      fontWeight: "body.3",
-      fontSize: 2,
-      letterSpacing: 1,
-    },
+  Button: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 4,
+    lineHeight: 1,
+  },
+  Caption: {
+    fontFamily: "0",
+    fontWeight: "1",
+    fontSize: 1,
+    lineHeight: 0,
+  },
+  SmallCaption: {
+    fontFamily: "0",
+    fontWeight: "1",
+    fontSize: 0,
+    lineHeight: 0,
+  },
+  Overline: {
+    fontFamily: "1",
+    fontWeight: "3",
+    fontSize: 3,
+    lineHeight: 0,
   },
 };
 

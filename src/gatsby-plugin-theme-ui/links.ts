@@ -4,9 +4,10 @@ const links: any = {
   nav: {
     cursor: "pointer",
     color: "black",
-    marginTop: 0,
-    zIndex: 1,
-    position: "absolute",
+    px: 2,
+    py: 1,
+    textTransform: "uppercase",
+    letterSpacing: "0.1em",
   },
   menu: {
     color: "black",

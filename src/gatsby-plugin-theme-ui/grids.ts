@@ -237,5 +237,49 @@ const grids = {
       gridTemplateColumns: "1fr",
     },
   },
+  content: {
+    // Add media query for mobile version, maybe add max/min-width, strapi hold width for image and such?
+    main: {
+      right: {
+        gridTemplateAreas: `"h i" 
+                          "sh i"
+                          "b i"`,
+        "@media screen and (max-width: 40em)": {
+          gridTemplateAreas: `"i"
+                          "h"
+                          "sh"
+                          "b"`,
+        },
+      },
+      left: {
+        gridTemplateAreas: `"i h"
+                          "i sh" 
+                          "i b"`,
+      },
+      top: {
+        gridTemplateAreas: `"i"
+                          "h"
+                          "sh"
+                          "b"`,
+      },
+      bottom: {
+        gridTemplateAreas: `"h"
+                          "sh" 
+                          "b"
+                          "i"`,
+      },
+    },
+    contact: {},
+    services: {
+      gridTemplateAreas: `"h h"
+                          "b b"
+                          "b b"`,
+      placeContent: "space-evenly",
+    },
+    service: {
+      gridTemplateAreas: `"m"
+                          "s"`,
+    },
+  },
 };
 export default grids;
