@@ -2,6 +2,7 @@ import colors from "./colors";
 import text from "./text";
 import buttons from "./buttons";
 import badges from "./badges";
+import boxes from "./boxes"
 import cards from "./cards";
 import shadows from "./shadows";
 import borders from "./borders";
@@ -19,6 +20,8 @@ import modal from "./modal";
 import spinner from "./spinner";
 import radii from "./radii";
 import tooltip from "./tooltip";
+import images from "./images";
+
 
 export const theme = {
   space: [
@@ -37,10 +40,14 @@ export const theme = {
   },
   letterSpacings: [1, 2, 2.5, 3, 3.5],
   zIndices: [0, 250, 500, 1000, 1500],
+  breakpoints: [
+    '40em', '@media (min-width: 56em) and (orientation: landscape)', '64em',
+  ],
   colors,
   text,
   buttons,
   badges,
+  boxes,
   cards,
   shadows,
   borders,
@@ -51,6 +58,7 @@ export const theme = {
   links,
   grids,
   flex,
+  images,
   heading,
   toaster,
   avatars,
