@@ -190,14 +190,14 @@ const grids = {
     width: "100%",
     height: "50%",
     borderBottom: "1px solid",
-    borderColor: "default.black",
+    borderColor: "black",
     gap: 0,
-    color: "default.textColor",
+    color: "otherColors.darkGreyShades.1",
     span: {
       margin: "10px",
     },
     a: {
-      color: "default.textColor",
+      color: "otherColors.darkGreyShades.1",
       margin: "5px",
     },
     gridTemplateColumns: "1fr 1fr",
@@ -209,8 +209,8 @@ const grids = {
         width: "100%",
         height: "80%",
         gridColumn: "1",
-        background: "default.background",
-        color: "default.textColor",
+        background: "background",
+        color: "otherColors.darkGreyShades.1",
       },
     },
     img: {
@@ -235,6 +235,50 @@ const grids = {
     },
     "@media (max-width: 890px)": {
       gridTemplateColumns: "1fr",
+    },
+  },
+  content: {
+    // Add media query for mobile version, maybe add max/min-width, strapi hold width for image and such?
+    main: {
+      right: {
+        gridTemplateAreas: `"h i" 
+                          "sh i"
+                          "b i"`,
+        "@media screen and (max-width: 40em)": {
+          gridTemplateAreas: `"i"
+                          "h"
+                          "sh"
+                          "b"`,
+        },
+      },
+      left: {
+        gridTemplateAreas: `"i h"
+                          "i sh" 
+                          "i b"`,
+      },
+      top: {
+        gridTemplateAreas: `"i"
+                          "h"
+                          "sh"
+                          "b"`,
+      },
+      bottom: {
+        gridTemplateAreas: `"h"
+                          "sh" 
+                          "b"
+                          "i"`,
+      },
+    },
+    contact: {},
+    services: {
+      gridTemplateAreas: `"h h"
+                          "b b"
+                          "b b"`,
+      placeContent: "space-evenly",
+    },
+    service: {
+      gridTemplateAreas: `"m"
+                          "s"`,
     },
   },
 };

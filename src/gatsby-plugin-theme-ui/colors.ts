@@ -38,25 +38,26 @@ import fieldError from "./icons/field/textFieldError.svg";
 import fieldSearch from "./icons/field/textFieldSearch.svg";
 
 const colors: Theme["colors"] = {
-  config: {
-    initialColorModeName: "light",
-  },
-
-  default: {
-    primary: "#6044B5",
-    secondary: "#4C3A80",
-    secondaryVariant: "#6E6893",
-    background: "#F6F7FB",
-    surfaces: "#FFFFFF",
-    text: "#4A4458",
-    disabledText: "#7E778D",
-    hightlight: "#6044B5",
-    hightlight2: "#8477A8",
-    hightlight3: "#FFFEFB",
-    surfaceHightlight: "#EAE4FA",
-    divadeColor: "#D8D3DA",
-    outlines: "#D8D3DA",
-    hovers: "#6044B5",
+  neutral: [
+    "#5B5F70",
+    "#4F5462",
+    "#4D5160",
+    "#3A3E48",
+    "#373944",
+    "#2B303A",
+    "#1F2228",
+    "#121418",
+  ],
+  primary: ["#6044B5", "#4F3894", "#473285", "#3B2A6F", "#332460"],
+  secondary: ["#009797", "#008A8A", "#006666", "#005757", "#004242"],
+  success: ["#60A83C", "#1EA338", "#17802D", "#0E7248", "#133F1B"],
+  error: ["#ED0C12", "#DD0915", "#CA070E", "#A3040C", "#460205"],
+  warning: ["#EEAD44", "#CB8B3A", "#B47B33", "#9E6C2D", "#5C3C14"],
+  notification: ["#3183C8", "#2769A0", "#1D4F78", "#194264", "#0F2B43"],
+  information: ["#6B798A", "#5F6B7A", "#555B68", "#414244", "#343537"],
+  services: {
+    bordershadow: "#CACFD9",
+    background: "#EDF0F7",
   },
   button: {
     error: "#C12945",
@@ -116,21 +117,26 @@ const colors: Theme["colors"] = {
   },
   modes: {
     dark: {
-      default: {
-        primary: "#7B4EFF",
-        secondary: "#A689FF",
-        secondaryVariant: "#7E778D",
-        background: "#2F2A41",
-        surfaces: "#4A4458",
-        text: "#FFFEFB",
-        disabledText: "#7E778D",
-        hightlight: "#A689FF",
-        hightlight2: "#746E83",
-        hightlight3: "#746E83",
-        surfaceHightlight: "#292336",
-        divadeColor: "#7E778D",
-        outlines: "#6B6278",
-        hovers: "#7B4EFF",
+      neutral: [
+        "#AEB6C5",
+        "#CACFD9",
+        "#D3D7DF",
+        "#DADEE5",
+        "#E1E6EF",
+        "#EDF0F7",
+        "#F1F3F9",
+        "#F8F9FC",
+      ],
+      primary: ["#9E8BEB", "#AB9BEE", "#B6A8F0", "#D2C9F8", "#E2DEF2"],
+      secondary: ["#41C2B7", "#67CEC5", "#97DED8", "#BDEAE6", "#E3F6F4"],
+      success: ["#17DE67", "#88D3A6", "#A6DEBC", "#B6E7CA", "#CFF2D6"],
+      error: ["#FF4C50", "#F2787A", "#EC999C", "#F8CDCE", "#F5DADA"],
+      warning: ["#FFB65C", "#FFBB63", "#FFCA86", "#FBDEA7", "#FDEDCE"],
+      notification: ["#64B8FF", "#7BBDF4", "#91C7F3", "#A6D5FC", "#D1EAFF"],
+      information: ["#8597AD", "#AAB7C6", "#B6C1CE", "#C8D0DA", "#DBE0E7"],
+      services: {
+        bordershadow: "#161719",
+        background: "#2B303A",
       },
       button: {
         error: "#C12945",

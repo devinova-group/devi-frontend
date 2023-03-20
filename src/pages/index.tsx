@@ -1,66 +1,76 @@
 import * as React from "react";
 import { graphql, HeadFC, PageProps, useStaticQuery } from "gatsby";
-import Button from "../library/Button";
-import Tooltip from "../library/Tooltip";
-import Badge from "../library/Badge";
-import Card from "../library/Card";
-import Heading from "../library/Heading";
-import Radio from "../library/Radio";
-import Label from "../library/Label";
-import Box from "../library/Box";
-import Image from "../library/Image";
-import Text from "../library/Text";
-import Checkbox from "../library/Checksbox";
-import Switch from "../library/Switch";
-import { Global, useColorMode } from "theme-ui";
-import { useState } from "react";
-import Avatar from "../library/Avatar";
-import Modal from "../library/Modal";
-import Field from "../library/Field";
-import Navbar from "../library/Navbar";
-import "../layout.css";
-import DeviMenu from "../DeviMenu";
-import AboutPage from "./about";
-
-interface PageData {
-  allStrapiTest: {
-    nodes: [
-      {
-        title: string;
-      }
-    ];
-  };
-}
+import { Box } from "theme-ui";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import "../css/global.css";
+import PageSection from "../components/pagesection";
+import { landingPageData } from "../interfaces/types";
 
 const IndexPage: React.FC<PageProps> = () => {
-  // const data: PageData = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       allStrapiTest {
-  //         nodes {
-  //           title
-  //         }
-  //       }
-  //     }
-  //   `
-  // );
-  const [colorMode, setColorMode] = useColorMode();
-  const [click, setClick] = useState(true);
+  const indexQuery: landingPageData = useStaticQuery(
+    graphql`
+      query {
+        strapiPage(pagename: { eq: "landing" }) {
+          contents {
+            heading {
+              title
+              position
+              variant
+            }
+            subheading {
+              title
+              position
+              variant
+            }
+            description {
+              title
+              position
+              variant
+            }
+            position
+            section
+            compType
+            services {
+              servicename
+              img {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData(width: 387, formats: [AUTO])
+                  }
+                }
+              }
+              title {
+                title
+                position
+                variant
+              }
+              description {
+                title
+                position
+                variant
+              }
+            }
+            img {
+              localFile {
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+  console.log(indexQuery);
+
   return (
-    <>
-      <DeviMenu />
-      <Box
-        sx={{
-          background: "default.background",
-          color: "default.text",
-        }}
-      >
-        <Box sx={{ height: "60rem" }}>Home</Box>
-        <Box sx={{ height: "50rem" }} id="section-1">
-          About
-        </Box>
-      </Box>
-    </>
+    <Box>
+      <Header />
+      {indexQuery.strapiPage.contents.map((item, i) => {
+        return <PageSection data={item} key={i} />;
+      })}
+      <Footer />
+    </Box>
   );
 };
 

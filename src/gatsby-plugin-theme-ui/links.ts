@@ -1,36 +1,17 @@
 const links: any = {
   cursor: "pointer",
-  color: "default.black",
+  color: "black",
   nav: {
     fontWeight: "100",
     cursor: "pointer",
-    color: "#2B303A",
-    display: "flex",
-    alignItems: "center",
-    paddingLeft: "2rem",
-    background: "transparent",
-    height: "3rem",
-    "&:hover": {
-      background: "linear-gradient(45deg, #6044B5, #EDF0F7);",
-      height: "3rem",
-      paddingLeft: "2rem",
-      color: "#fff",
-      boxSizing: "border-box",
-    }
+    color: "black",
+    px: 2,
+    py: 1,
+    textTransform: "uppercase",
+    letterSpacing: "0.1em",
   },
   menu: {
-    fontWeight: "100",
-    cursor: "pointer",
-    paddingBottom: "10px",
-    boxSizing: "border-box",
-    zIndex: 1,
-    display: "flex",
-    justifyContent: "space-between",
-    borderBottom: "3px solid transparent",
-    "&:hover": {
-      borderColor: "#6044B5",
-      boxSizing: "border-box",
-    }
+    color: "black",
   },
   subHead: {
     fontWeight: "100",
