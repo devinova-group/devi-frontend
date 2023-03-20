@@ -27,6 +27,10 @@ const boxes: any = {
     float: "left",
     marginTop: "5rem"
   },
+  subLinks: {
+    marginLeft: "30px", 
+    borderLeft: "2px solid black"
+  },
   alignLogo: {
     display: "flex",
     flexDirection: "row",
