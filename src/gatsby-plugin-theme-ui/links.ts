@@ -14,13 +14,15 @@ const links: any = {
     color: "black",
   },
   desktop: {
-    fontWeight: "100",
+    fontFamily: "OpenSans",
+    fontStyle: "regular",
+    fontWeight: "300",
     cursor: "pointer",
     boxSizing: "border-box",
     zIndex: 1,
     display: "flex",
     justifyContent: "space-between",
-    borderBottom: "3px solid transparent",
+    borderBottom: "2px solid transparent",
     "&:hover": {
       borderColor: "#6044B5",
       boxSizing: "border-box",
@@ -56,23 +58,6 @@ const links: any = {
       boxSizing: "border-box",
     }
   },
-  withSubs: {
-    fontWeight: "100",
-    cursor: "pointer",
-    color: "#2B303A",
-    display: "flex",
-    flexDirection: "column",
-    paddingLeft: "2rem",
-    background: "transparent",
-    height: "3rem",
-    "&:hover": {
-      background: "linear-gradient(45deg, #6044B5, #EDF0F7);",
-      height: "3rem",
-      paddingLeft: "2rem",
-      color: "#fff",
-      boxSizing: "border-box",
-    }
-  }
 };
 
 export default links;

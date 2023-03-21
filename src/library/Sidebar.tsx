@@ -15,10 +15,6 @@ const slideIn = keyframes({
   "0%": { right: "-400px" },
   "100%": { right: "0" },
 });
-const slideOut = keyframes({
-  "0%": { right: "0" },
-  "100%": { right: "-300px" },
-});
 
 const Sidebar: React.FC<SidebarProps> = ({ children }: SidebarProps) => {
   const [menuOpen, setMenuOpen] = useState(false);

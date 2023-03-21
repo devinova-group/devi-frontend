@@ -38,17 +38,17 @@ const DeviMenu = (props: BoxProps) => {
           <Image src={switchLight} variant="test" />
         </Navbars.Nav>
         <Sidebar>
-          <Box variant="boxes.mobileLinks">
-            <NavLink variant="mobileLinks">New Nova</NavLink>
-            <Box variant="boxes.subLinks">
-              <NavLink variant="mobileLinks">Test 1</NavLink>
-              <NavLink variant="mobileLinks">Test 2</NavLink>
-            </Box>
-            <NavLink variant="mobileLinks">Career</NavLink>
-            <NavLink variant="mobileLinks">Services</NavLink>
-            <NavLink variant="mobileLinks">About</NavLink>
-            <NavLink variant="mobileLinks">Contact</NavLink>
-          </Box>
+          <Navbars.MobileNav>
+            <Navbars.Link size="mobile">New Nova</Navbars.Link>
+            <Navbars.SubNav>
+              <Navbars.Link size="mobile">Test 1</Navbars.Link>
+              <Navbars.Link size="mobile">Test 2</Navbars.Link>
+            </Navbars.SubNav>
+            <Navbars.Link size="mobile">Career</Navbars.Link>
+            <Navbars.Link size="mobile">Services</Navbars.Link>
+            <Navbars.Link size="mobile">About</Navbars.Link>
+            <Navbars.Link size="mobile">Contact</Navbars.Link>
+          </Navbars.MobileNav>
         </Sidebar>
       </Navbars.Navbar>
     </>

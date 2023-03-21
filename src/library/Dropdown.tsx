@@ -22,10 +22,13 @@ const Dropdown: React.FC<DropDownProps> = ({ children }: DropDownProps) => {
         cursor: "pointer",
       }}
     >
-      <Box sx={{ display: "flex", flexDirection: "row" }}>
+      <Box sx={{ display: "flex" }}>
         <Image
           src={arrow}
-          sx={{ marginLeft: "10px", display: open ? "none" : "flex" }}
+          sx={{
+            marginLeft: "10px",
+            display: open ? "none" : "flex",
+          }}
           onClick={(e) => setOpen(!open)}
         />
         <Image
