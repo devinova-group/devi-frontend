@@ -5,7 +5,7 @@ import { Box, BoxProps } from "theme-ui";
 import NavLink from "./library/NavLink";
 import switchLight from "./assets/svg/switch.svg";
 import Dropdown from "./library/Dropdown";
-import Navbar from "./library/Navbar";
+import Navbars from "./library/Navbar";
 import Logo from "./assets/svg/logo.png";
 import Sidebar from "./library/Sidebar";
 
@@ -19,40 +19,38 @@ const DeviMenu = (props: BoxProps) => {
   };
   return (
     <>
-      <Navbar>
-        <Box variant="boxes.alignLogo">
+      <Navbars.Navbar>
+        <Navbars.Brand>
           <Image src={Logo} variant="desktopLogo" />
-        </Box>
-        <Box variant="boxes.desktopLinks">
-          <NavLink variant="menu">
+        </Navbars.Brand>
+        <Navbars.Nav>
+          <Navbars.Link size="desktop">
             New Nova
             <Dropdown>
               <NavLink variant="subHead">New Nova</NavLink>
               <NavLink variant="subHead">Consulting</NavLink>
             </Dropdown>
-          </NavLink>
-          <NavLink variant="menu">Career</NavLink>
-          <NavLink variant="menu">Services</NavLink>
-          <NavLink variant="menu" onClick={handleClickScroll}>
-            About
-          </NavLink>
-          <NavLink variant="menu">Contact</NavLink>
+          </Navbars.Link>
+          <Navbars.Link size="desktop">Career</Navbars.Link>
+          <Navbars.Link size="desktop">Services</Navbars.Link>
+          <Navbars.Link size="desktop">About</Navbars.Link>
+          <Navbars.Link size="desktop">Contact</Navbars.Link>
           <Image src={switchLight} variant="test" />
-        </Box>
+        </Navbars.Nav>
         <Sidebar>
           <Box variant="boxes.mobileLinks">
-            <NavLink variant="nav">New Nova</NavLink>
+            <NavLink variant="mobileLinks">New Nova</NavLink>
             <Box variant="boxes.subLinks">
-              <NavLink>Test 1</NavLink>
-              <NavLink>Test 2</NavLink>
+              <NavLink variant="mobileLinks">Test 1</NavLink>
+              <NavLink variant="mobileLinks">Test 2</NavLink>
             </Box>
-            <NavLink variant="nav">Career</NavLink>
-            <NavLink variant="nav">Services</NavLink>
-            <NavLink variant="nav">About</NavLink>
-            <NavLink variant="nav">Contact</NavLink>
+            <NavLink variant="mobileLinks">Career</NavLink>
+            <NavLink variant="mobileLinks">Services</NavLink>
+            <NavLink variant="mobileLinks">About</NavLink>
+            <NavLink variant="mobileLinks">Contact</NavLink>
           </Box>
         </Sidebar>
-      </Navbar>
+      </Navbars.Navbar>
     </>
   );
 };
