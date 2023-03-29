@@ -1,6 +1,8 @@
-import {useStaticQuery, graphql} from "gatsby";
+/* import {useStaticQuery, graphql} from "gatsby"; */
 import * as React from "react";
-import {Box, NavLink} from "theme-ui";
+import Box from "../library/Box";
+import NavLink from "../library/NavLink";
+
 import Text from "../library/Text";
 
 const mock = {

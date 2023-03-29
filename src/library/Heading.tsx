@@ -1,3 +1,4 @@
+import React from "react";
 import { Heading as HeadingThemeUi } from "theme-ui";
 import { HeadingProps as HeadingPropsThemeUi } from "theme-ui";
 

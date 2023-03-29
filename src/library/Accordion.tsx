@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-
+import React from "react";
 import { useEffect, useRef, useState } from "react";
 import { Box, jsx } from "theme-ui";
 interface Props {

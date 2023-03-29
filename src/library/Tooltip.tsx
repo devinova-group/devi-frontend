@@ -1,7 +1,8 @@
-import {keyframes} from "@emotion/react";
-import {MutableRefObject, ReactNode, useRef, useState} from "react";
+import React from "react";
+import { keyframes } from "@emotion/react";
+import { MutableRefObject, ReactNode, useRef, useState } from "react";
 import ReactDOM from "react-dom";
-import {Box, BoxProps} from "theme-ui";
+import { Box, BoxProps } from "theme-ui";
 
 interface tipProps {
   children: ReactNode;
@@ -15,7 +16,7 @@ interface tipProps {
 
 interface portalProps {
   children: ReactNode;
-  coords: {x?: number; y?: number};
+  coords: { x?: number; y?: number };
   arrow?: boolean;
   follow?: boolean;
   placement?: "top" | "bottom" | "right" | "left";
@@ -26,10 +27,10 @@ interface portalProps {
 }
 
 const Tooltip = (
-  {children, tip, arrow, follow, placement, fade, delay}: tipProps,
+  { children, tip, arrow, follow, placement, fade, delay }: tipProps,
   props: BoxProps
 ) => {
-  const [coords, setCoords] = useState<{y?: number; x?: number}>({});
+  const [coords, setCoords] = useState<{ y?: number; x?: number }>({});
   const [isOn, setOn] = useState(false);
 
   const hoverBox = useRef<HTMLDivElement | null>();
@@ -93,8 +94,8 @@ const Tooltip = (
   );
 };
 
-const fadeIn = keyframes({from: {opacity: 0}, to: {opacity: 1}});
-const fadeOut = keyframes({from: {opacity: 1}, to: {opacity: 0}});
+const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
+const fadeOut = keyframes({ from: { opacity: 1 }, to: { opacity: 0 } });
 
 const ToolTipPortal = ({
   children,

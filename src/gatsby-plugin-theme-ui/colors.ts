@@ -1,4 +1,4 @@
-import {Theme} from "theme-ui";
+import { Theme } from "theme-ui";
 /* Switch */
 import moonBig from "./icons/switch/moonBig.svg";
 import backgroundV2Big from "./icons/switch/backgroundV2Big.svg";
@@ -38,6 +38,9 @@ import fieldError from "./icons/field/textFieldError.svg";
 import fieldSearch from "./icons/field/textFieldSearch.svg";
 
 const colors: Theme["colors"] = {
+  config: {
+    initialColorModeName: "light",
+  },
   neutral: [
     "#5B5F70",
     "#4F5462",
@@ -59,6 +62,7 @@ const colors: Theme["colors"] = {
     bordershadow: "#CACFD9",
     background: "#EDF0F7",
   },
+  text: { color: "#2B303A" },
   button: {
     error: "#C12945",
     errorDisabled: "#E094A2",
@@ -138,6 +142,7 @@ const colors: Theme["colors"] = {
         bordershadow: "#161719",
         background: "#2B303A",
       },
+      text: { color: "#EDF0F7" },
       button: {
         error: "#C12945",
         errorDisabled: "#9A4454",

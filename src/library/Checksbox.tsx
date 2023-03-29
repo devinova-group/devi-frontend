@@ -1,3 +1,4 @@
+import React from "react";
 import { Checkbox as CheckboxThemeUi } from "theme-ui";
 import { CheckboxProps } from "theme-ui";
 

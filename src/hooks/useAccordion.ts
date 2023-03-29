@@ -1,13 +1,14 @@
+import React from "react";
 import { useState } from "react";
 
 const useAccordion = () => {
   const [toggleAccordion, setToggleAccordion] = useState(false);
 
-  function onClick() {
+  function onClickAccordion() {
     setToggleAccordion(!toggleAccordion);
   }
 
-  return { onClick, toggleAccordion };
+  return { onClickAccordion, toggleAccordion };
 };
 
 export default useAccordion;

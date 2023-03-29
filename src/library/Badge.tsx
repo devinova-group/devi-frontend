@@ -1,3 +1,4 @@
+import React from "react";
 import { Badge as BadgeThemeUi } from "theme-ui";
 import { BadgeProps as BadgePropsThemeUi } from "theme-ui";
 

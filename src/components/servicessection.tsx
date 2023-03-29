@@ -1,10 +1,12 @@
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
-import {Box, Grid} from "theme-ui";
-import {contentData} from "../interfaces/types";
+
+import { contentData } from "../interfaces/types";
+import Box from "../library/Box";
+import Grid from "../library/Grid";
 import Text from "../library/Text";
 
-const ServicesSection = ({data}: contentData) => {
+const ServicesSection = ({ data }: contentData) => {
   return (
     <Grid variant={`content.services`}>
       <Text

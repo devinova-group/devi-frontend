@@ -1,5 +1,5 @@
 const box = {
-  header: {
+  /*   header: {
     height: "4rem",
     display: "flex",
     justifyContent: "space-between",
@@ -28,7 +28,7 @@ const box = {
       width: "413px",
       height: "546px",
     },
-  },
+  }, */
 };
 
 export default box;

@@ -1,4 +1,4 @@
-import type {GatsbyConfig} from "gatsby";
+import type { GatsbyConfig } from "gatsby";
 
 require("dotenv").config({
   path: `.env.development`,
@@ -32,6 +32,14 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

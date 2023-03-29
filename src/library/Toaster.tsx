@@ -1,3 +1,4 @@
+import React from "react";
 import { Box } from "theme-ui";
 import { BoxProps as ToasterPropsThemeUI } from "theme-ui";
 

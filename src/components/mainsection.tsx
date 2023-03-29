@@ -1,13 +1,14 @@
 import React from "react";
-import {Grid, Image} from "theme-ui";
-import {contentData} from "../interfaces/types";
+import { contentData } from "../interfaces/types";
+import Grid from "../library/Grid";
+import Image from "../library/Image";
 import Text from "../library/Text";
 
-const MainSection = ({data}: contentData) => {
+const MainSection = ({ data }: contentData) => {
   return (
     <Grid variant={`content.main.${data.position ?? "right"}`}>
       {data.img ? (
-        <Image src={data.img.localFile.url} sx={{gridArea: "i"}} />
+        <Image src={data.img.localFile.url} sx={{ gridArea: "i" }} />
       ) : (
         <></>
       )}

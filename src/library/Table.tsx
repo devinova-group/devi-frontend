@@ -1,3 +1,4 @@
+import React from "react";
 import { BoxProps as TableThemeUI } from "theme-ui";
 import { useSearch } from "../hooks/useSearch";
 import useSortableData from "../hooks/useSortableData";
