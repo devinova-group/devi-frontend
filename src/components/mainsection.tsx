@@ -1,58 +1,31 @@
 import React from "react";
-import {Grid, Image} from "theme-ui";
+import {Grid, useColorMode} from "theme-ui";
 import {contentData} from "../interfaces/types";
-import Text from "../library/Text";
+import SectionImg from "./section/sectionimg";
+import SectionLeft from "./section/sectionLeft";
 
 const MainSection = ({data}: contentData) => {
+  const [mode] = useColorMode();
+
+  let bgVariable =
+    mode === "dark"
+      ? `url(${data.darkbackgroundimg.localFile.url})`
+      : `url(${data.backgroundimg.localFile.url})`;
   return (
-    <Grid variant={`content.main.${data.position ?? "right"}`}>
-      {data.img ? (
-        <Image src={data.img.localFile.url} sx={{gridArea: "i"}} />
-      ) : (
-        <></>
-      )}
-      {data.heading ? (
-        <Text
-          variant={data.heading.variant ?? "H6"}
-          sx={{
-            gridArea: "h",
-            display: "flex",
-            justifyContent: data.heading.position,
-          }}
-        >
-          {data.heading.title}
-        </Text>
-      ) : (
-        <></>
-      )}
-      {data.subheading ? (
-        <Text
-          variant={data.subheading.variant ?? "H6"}
-          sx={{
-            gridArea: "sh",
-            display: "flex",
-            justifyContent: data.subheading.position,
-          }}
-        >
-          {data.subheading.title}
-        </Text>
-      ) : (
-        <></>
-      )}
-      {data.description ? (
-        <Text
-          variant={data.description.variant ?? "Body2"}
-          sx={{
-            gridArea: "b",
-            display: "flex",
-            justifyContent: data.description.position,
-          }}
-        >
-          {data.description.title}
-        </Text>
-      ) : (
-        <></>
-      )}
+    <Grid
+      variant={`content.section.${data.position ?? "right"}.${
+        data.mobilePosition ?? "top"
+      }`}
+      sx={{
+        background: bgVariable,
+      }}
+    >
+      <SectionImg
+        img={data.img}
+        alternate={data.section}
+        fit={data.imgObjectFit}
+      />
+      <SectionLeft data={data} />
     </Grid>
   );
 };

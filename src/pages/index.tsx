@@ -1,6 +1,6 @@
 import * as React from "react";
 import {graphql, HeadFC, PageProps, useStaticQuery} from "gatsby";
-import {Box} from "theme-ui";
+import {Box, Flex} from "theme-ui";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "../css/global.css";
@@ -31,27 +31,26 @@ const IndexPage: React.FC<PageProps> = () => {
             position
             section
             compType
-            services {
-              servicename
-              img {
-                localFile {
-                  childImageSharp {
-                    gatsbyImageData(width: 387, formats: [AUTO])
-                  }
-                }
-              }
-              title {
-                title
-                position
-                variant
-              }
-              description {
-                title
-                position
-                variant
-              }
+            gap
+            buttons {
+              text
+              color
+              size
+              variant
             }
             img {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+            backgroundimg {
+              localFile {
+                url
+              }
+            }
+            darkbackgroundimg {
               localFile {
                 url
               }
@@ -66,14 +65,14 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Box>
       <Header />
-      {indexQuery.strapiPage.contents.map((item, i) => {
-        return <PageSection data={item} key={i} />;
-      })}
+      <Flex variant="flex.main">
+        {indexQuery.strapiPage.contents.map((item, i) => {
+          return <PageSection data={item} key={i} />;
+        })}
+      </Flex>
       <Footer />
     </Box>
   );
 };
 
 export default IndexPage;
-
-export const Head: HeadFC = () => <title>Home Page</title>;

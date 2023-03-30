@@ -14,7 +14,7 @@ const box = {
       alignItems: "center",
       padding: "29px 13px",
       gap: "32px",
-      background: "services.background",
+      background: "services.serviceBackground",
       boxShadow: "0px 6px 5px var(--theme-ui-colors-services-bordershadow)",
       borderRadius: "11px",
       height: "348px",
@@ -27,6 +27,11 @@ const box = {
       gap: "36px",
       width: "413px",
       height: "546px",
+    },
+  },
+  section: {
+    imgContainer: {
+      maxWidth: "50%",
     },
   },
 };

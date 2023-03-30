@@ -1,4 +1,5 @@
 import {keyframes} from "@emotion/react";
+import React from "react";
 import {MutableRefObject, ReactNode, useRef, useState} from "react";
 import ReactDOM from "react-dom";
 import {Box, BoxProps} from "theme-ui";

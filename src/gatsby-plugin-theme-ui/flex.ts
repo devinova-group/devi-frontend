@@ -14,6 +14,21 @@ const flex: any = {
     justifyContent: "space-between",
     alignItems: "center",
   },
+  sectionText: {
+    flexDirection: "column",
+    justifyContent: "center",
+    maxWidth: "440px",
+  },
+  section: {
+    width: "1440px",
+    height: "660px",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  main: {
+    flexDirection: "column",
+    alignItems: "center",
+  },
 };
 
 export default flex;

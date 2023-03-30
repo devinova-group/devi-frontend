@@ -25,6 +25,21 @@ export type imagePosition = "bot" | "top" | "right" | "left";
 
 export type componentType = "main" | "services" | "contact";
 
+type buttonVariant = "outlined" | "default" | "text";
+
+type buttonSize = "small" | "medium" | "large";
+
+type buttonColor = "primary" | "error" | "success";
+
+type objfit = "none" | "contain" | "cover" | "fill" | "scale-down";
+
+interface button {
+  text: string;
+  color: buttonColor;
+  size: buttonSize;
+  variant: buttonVariant;
+}
+
 export const variantMapping = {
   H1: "h1",
   H2: "h2",
@@ -43,58 +58,61 @@ export const variantMapping = {
 
 export interface landingPageData {
   strapiPage: {
-    contents: [
-      {
-        heading: textComponent;
-        subheading: textComponent;
-        description: textComponent;
-        position: imagePosition;
-        section: string;
-        compType: componentType;
-        services: [
-          {
-            servicename: string;
-            img: {
-              localFile: any;
-            };
-            title: textComponent;
-            description: textComponent;
-          }
-        ];
-        img: {
-          localFile: {
-            url: string;
-          };
-        };
-      }
-    ];
+    contents: [content];
   };
 }
 
 type content = {
+  topsubheading: textComponent;
   heading: textComponent;
   subheading: textComponent;
   description: textComponent;
   position: imagePosition;
-  section: string;
   compType: componentType;
+  buttons: [button];
+  section: string;
+  gap: number;
+  mobilePosition: "bottom" | "top";
+  imgObjectFit: objfit;
+  img: {
+    localFile: any;
+  };
+  backgroundimg: {
+    localFile: any;
+  };
+  darkbackgroundimg: {
+    localFile: any;
+  };
   services: [
     {
       servicename: string;
+      title: textComponent;
+      description: textComponent;
       img: {
         localFile: any;
       };
-      title: textComponent;
-      description: textComponent;
     }
   ];
-  img: {
-    localFile: {
-      url: string;
-    };
-  };
 };
 
 export interface contentData {
   data: content;
+}
+
+export interface sectionTextProps {
+  topsubheader?: textComponent;
+  header?: textComponent;
+  subheader?: textComponent;
+  description?: textComponent;
+  gap?: number;
+}
+
+export interface sectionButtonProps {
+  buttons?: [button];
+}
+
+export interface sectionImgProps {
+  img: {localFile: any};
+  alternate: string;
+  fit?: objfit;
 }

@@ -38,6 +38,7 @@ import fieldError from "./icons/field/textFieldError.svg";
 import fieldSearch from "./icons/field/textFieldSearch.svg";
 
 const colors: Theme["colors"] = {
+  text: "#2B303A",
   neutral: [
     "#5B5F70",
     "#4F5462",
@@ -57,7 +58,8 @@ const colors: Theme["colors"] = {
   information: ["#6B798A", "#5F6B7A", "#555B68", "#414244", "#343537"],
   services: {
     bordershadow: "#CACFD9",
-    background: "#EDF0F7",
+    serviceBackground: "#EDF0F7",
+    background: "#F1F3F9",
   },
   button: {
     error: "#C12945",
@@ -117,6 +119,7 @@ const colors: Theme["colors"] = {
   },
   modes: {
     dark: {
+      text: "#EDF0F7",
       neutral: [
         "#AEB6C5",
         "#CACFD9",
@@ -136,7 +139,8 @@ const colors: Theme["colors"] = {
       information: ["#8597AD", "#AAB7C6", "#B6C1CE", "#C8D0DA", "#DBE0E7"],
       services: {
         bordershadow: "#161719",
-        background: "#2B303A",
+        serviceBackground: "#2B303A",
+        background: "#1F2228",
       },
       button: {
         error: "#C12945",
