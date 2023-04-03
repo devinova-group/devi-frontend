@@ -1,3 +1,8 @@
+import {title} from "process";
+import buttons from "../gatsby-plugin-theme-ui/buttons";
+import heading from "../gatsby-plugin-theme-ui/heading";
+import text from "../gatsby-plugin-theme-ui/text";
+
 export type textVariants =
   | "H1"
   | "H2"
@@ -21,7 +26,7 @@ export interface textComponent {
   variant: textVariants;
 }
 
-export type imagePosition = "bot" | "top" | "right" | "left";
+export type imagePosition = "right" | "left";
 
 export type componentType = "main" | "services" | "contact";
 
@@ -63,36 +68,46 @@ export interface landingPageData {
 }
 
 type content = {
-  topsubheading: textComponent;
-  heading: textComponent;
-  subheading: textComponent;
-  description: textComponent;
-  position: imagePosition;
-  compType: componentType;
-  buttons: [button];
-  section: string;
-  gap: number;
-  mobilePosition: "bottom" | "top";
-  imgObjectFit: objfit;
-  img: {
-    localFile: any;
+  compType: string;
+  sectionName: string;
+  section: {
+    section: string;
+    heading: textComponent;
+    subheading: textComponent;
+    body: textComponent;
+    buttons: [button];
+    gap: number;
+    imgPosition: imagePosition;
+    mobileImgPosition: string;
+    objectFit: objfit;
   };
-  backgroundimg: {
-    localFile: any;
-  };
-  darkbackgroundimg: {
-    localFile: any;
-  };
-  services: [
-    {
-      servicename: string;
-      title: textComponent;
-      description: textComponent;
-      img: {
-        localFile: any;
+  services: {
+    serviceName: string;
+    title: textComponent;
+    body: textComponent;
+    img: {
+      localFile: {
+        childImageSharp: {
+          gatsbyImageData: any;
+        };
       };
-    }
-  ];
+    };
+  };
+  text: {
+    section: string;
+    heading: textComponent;
+    body: textComponent;
+    bgColor: string;
+    mobilePosition: string;
+    position: string;
+    img: {
+      localFile: {
+        childImageSharp: {
+          gatsbyImageData: any;
+        };
+      };
+    };
+  };
 };
 
 export interface contentData {

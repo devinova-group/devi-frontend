@@ -4,6 +4,7 @@ import {sectionImgProps} from "../../interfaces/types";
 
 const SectionImg = ({img, alternate, fit}: sectionImgProps) => {
   const image = getImage(img.localFile);
+  console.log(fit);
 
   return (
     <GatsbyImage

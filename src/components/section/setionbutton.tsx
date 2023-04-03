@@ -8,7 +8,7 @@ const SectionButton = ({buttons}: sectionButtonProps) => {
     <Flex>
       {buttons?.map((item, i) => {
         return (
-          <Button key={i} color={item.color} size={item.size}>
+          <Button key={i} color={item.color} size={"large"}>
             {item.text}
           </Button>
         );
