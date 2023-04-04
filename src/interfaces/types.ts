@@ -1,8 +1,3 @@
-import {title} from "process";
-import buttons from "../gatsby-plugin-theme-ui/buttons";
-import heading from "../gatsby-plugin-theme-ui/heading";
-import text from "../gatsby-plugin-theme-ui/text";
-
 export type textVariants =
   | "H1"
   | "H2"
