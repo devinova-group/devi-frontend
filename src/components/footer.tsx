@@ -22,17 +22,17 @@ interface FooterData {
 }
 
 const Footer = () => {
-  // const data: FooterData = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       allStrapiContent {
-  //         nodes {
-  //           Heading
-  //         }
-  //       }
-  //     }
-  //   `
-  // );
+  const data: FooterData = useStaticQuery(
+    graphql`
+      query {
+        allStrapiContent {
+          nodes {
+            Heading
+          }
+        }
+      }
+    `
+  );
   return (
     <Box variant="box.footer">
       <Box>
