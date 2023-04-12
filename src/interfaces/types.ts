@@ -13,6 +13,25 @@ export type textVariants =
   | "SmallCaption"
   | "Overline";
 
+export type buttonColors =
+  | "primary"
+  | "secondary"
+  | "success"
+  | "error"
+  | "warning"
+  | "notification"
+  | "information";
+
+export const colorMapping = {
+  primary: "primary.0",
+  secondary: "secondary.0",
+  success: "success.0",
+  error: "error.0",
+  warning: "warning.0",
+  notification: "notification.0",
+  information: "information.0",
+};
+
 export type positionVariants = "left" | "center" | "right";
 
 export interface textComponent {
@@ -55,59 +74,6 @@ export const variantMapping = {
   SmallCaption: "span",
   Overline: "span",
 };
-
-export interface landingPageData {
-  strapiPage: {
-    contents: [content];
-  };
-}
-
-type content = {
-  compType: string;
-  sectionName: string;
-  section: {
-    section: string;
-    heading: textComponent;
-    subheading: textComponent;
-    body: textComponent;
-    buttons: [button];
-    gap: number;
-    imgPosition: imagePosition;
-    mobileImgPosition: string;
-    objectFit: objfit;
-  };
-  services: {
-    serviceName: string;
-    title: textComponent;
-    body: textComponent;
-    img: {
-      localFile: {
-        childImageSharp: {
-          gatsbyImageData: any;
-        };
-      };
-    };
-  };
-  text: {
-    section: string;
-    heading: textComponent;
-    body: textComponent;
-    bgColor: string;
-    mobilePosition: string;
-    position: string;
-    img: {
-      localFile: {
-        childImageSharp: {
-          gatsbyImageData: any;
-        };
-      };
-    };
-  };
-};
-
-export interface contentData {
-  data: content;
-}
 
 export interface sectionTextProps {
   topsubheader?: textComponent;

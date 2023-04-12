@@ -39,6 +39,8 @@ import fieldSearch from "./icons/field/textFieldSearch.svg";
 
 const colors: Theme["colors"] = {
   text: "#2B303A",
+  buttonText: "#EDF0F7",
+  background: "white",
   neutral: [
     "#5B5F70",
     "#4F5462",
@@ -49,13 +51,13 @@ const colors: Theme["colors"] = {
     "#1F2228",
     "#121418",
   ],
-  primary: ["#6044B5", "#4F3894", "#473285", "#3B2A6F", "#332460"],
-  secondary: ["#009797", "#008A8A", "#006666", "#005757", "#004242"],
-  success: ["#60A83C", "#1EA338", "#17802D", "#0E7248", "#133F1B"],
-  error: ["#ED0C12", "#DD0915", "#CA070E", "#A3040C", "#460205"],
-  warning: ["#EEAD44", "#CB8B3A", "#B47B33", "#9E6C2D", "#5C3C14"],
+  primary: ["#6044B5", "#4D3691", "#43307F", "#3A296D", "#271C4A"],
+  secondary: ["#019393", "#018383", "#006666", "#005252", "#003D3D"],
+  success: ["#5A9D39", "#1EA338", "#17802D", "#0E7248", "#164B21"],
+  error: ["#ED0C12", "#DD0915", "#BC0B11", "#A3040C", "#460205"],
+  warning: ["#F68F0E", "#E07D00", "#CC7100", "#B86600", "#5C3C14"],
   notification: ["#3183C8", "#2769A0", "#1D4F78", "#194264", "#0F2B43"],
-  information: ["#6B798A", "#5F6B7A", "#555B68", "#414244", "#343537"],
+  information: ["#6B798A", "#5F6B7A", "#555B68", "#414244", "#28282A"],
   services: {
     bordershadow: "#CACFD9",
     serviceBackground: "#EDF0F7",
@@ -120,6 +122,8 @@ const colors: Theme["colors"] = {
   modes: {
     dark: {
       text: "#EDF0F7",
+      buttonText: "#EDF0F7",
+      background: "black",
       neutral: [
         "#AEB6C5",
         "#CACFD9",
@@ -131,12 +135,12 @@ const colors: Theme["colors"] = {
         "#F8F9FC",
       ],
       primary: ["#9E8BEB", "#AB9BEE", "#B6A8F0", "#D2C9F8", "#E2DEF2"],
-      secondary: ["#41C2B7", "#67CEC5", "#97DED8", "#BDEAE6", "#E3F6F4"],
-      success: ["#17DE67", "#88D3A6", "#A6DEBC", "#B6E7CA", "#CFF2D6"],
-      error: ["#FF4C50", "#F2787A", "#EC999C", "#F8CDCE", "#F5DADA"],
-      warning: ["#FFB65C", "#FFBB63", "#FFCA86", "#FBDEA7", "#FDEDCE"],
-      notification: ["#64B8FF", "#7BBDF4", "#91C7F3", "#A6D5FC", "#D1EAFF"],
-      information: ["#8597AD", "#AAB7C6", "#B6C1CE", "#C8D0DA", "#DBE0E7"],
+      secondary: ["#42CDC1", "#67CEC5", "#97DED8", "#BDEAE6", "#E3F6F4"],
+      success: ["#1DE76E", "#75F0A6", "#9EF4C1", "#B6F7D0", "#CDF9DF"],
+      error: ["#FF464A", "#FF6B6E", "#FF8587", "#FF9EA0", "#FFC2C3"],
+      warning: ["#FFB65C", "#FFC375", "#FFCC8A", "#FBDEA7", "#FDEDCE"],
+      notification: ["#64B8FF", "#84C1F5", "#9ACCF4", "#B0DAFC", "#D1EAFF"],
+      information: ["#8E9FB4", "#AAB7C6", "#B6C1CE", "#C8D0DA", "#DBE0E7"],
       services: {
         bordershadow: "#161719",
         serviceBackground: "#2B303A",

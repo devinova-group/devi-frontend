@@ -1,0 +1,9 @@
+type pageQuery {
+  pagename: string;
+  comps: [{
+    __typename: string;
+    header: string;
+    subheader: string;
+    body: string;
+  }]
+}

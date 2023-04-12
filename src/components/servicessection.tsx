@@ -1,13 +1,12 @@
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import React from "react";
 import {Box, Grid} from "theme-ui";
-import {contentData} from "../interfaces/types";
 import Text from "../library/Text";
 
-const ServicesSection = ({data}: contentData) => {
+const ServicesSection = ({data}: any) => {
   return (
     <Grid variant={`content.services`}>
-      <Text
+      {/* <Text
         variant={data.heading.variant}
         sx={{
           gridArea: "h",
@@ -44,7 +43,7 @@ const ServicesSection = ({data}: contentData) => {
             </Text>
           </Box>
         );
-      })}
+      })} */}
     </Grid>
   );
 };
