@@ -1,7 +1,12 @@
-import {useStaticQuery, graphql} from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import * as React from "react";
-import {Box, NavLink} from "theme-ui";
+import { Box, NavLink, SxProp } from "theme-ui";
 import Text from "../library/Text";
+import deviLogo from "../icons/deviLogo.svg";
+import inIcon from "../icons/in.svg";
+import insta from "../icons/insta.svg";
+import twitter from "../icons/twitter.svg";
+import Image from "../library/Image";
 
 const mock = {
   title: "Gothenburg office",
@@ -12,57 +17,107 @@ const mock = {
 };
 
 interface FooterData {
-  allStrapiContent: {
-    nodes: [
-      {
-        Heading: string;
-      }
-    ];
+  strapiFooter: {
+    adress: string;
+    email: string;
+    number: string;
+    location: string;
   };
 }
 
 const Footer = () => {
-  // const data: FooterData = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       allStrapiContent {
-  //         nodes {
-  //           Heading
-  //         }
-  //       }
-  //     }
-  //   `
-  // );
+  const footerQuery: FooterData = useStaticQuery(
+    graphql`
+      query MyQuery {
+        strapiFooter {
+          adress
+          email
+          number
+          location
+        }
+      }
+    `
+  );
+  console.log(footerQuery);
   return (
-    <Box variant="box.footer">
+    <Box sx={container}>
       <Box>
-        <li>
-          <Text variant="Button">{mock.title}</Text>
-          <br />
-          <Text variant="Caption">{mock.adress}</Text>
-        </li>
-        <li>
-          <Text variant="Caption">{mock.location}</Text>
-        </li>
-        <li>
-          <Text variant="Caption">{mock.email}</Text>
-        </li>
-        <li>
-          <Text variant="Caption">{mock.number}</Text>
-        </li>
+        <Text>{footerQuery.strapiFooter.adress}</Text>;
       </Box>
-      <Box>
-        <NavLink>People</NavLink>
-        <NavLink>Data & Privacy</NavLink>
-        <NavLink>Manage cookies</NavLink>
+      <Box sx={{ marginLeft: "4rem", marginTop: "3rem" }}>
+        <Text variant="H6">{mock.title}</Text>
+        <br />
+        <Text variant="Body1" sx={{ color: "modes.dark.text" }}>
+          {mock.adress}
+        </Text>
+        <Text variant="Body1">{mock.location}</Text>
+        <Text variant="Body1">{mock.email}</Text>
+        <Text variant="Body1">{mock.number}</Text>
       </Box>
-      <Box>
-        <NavLink>linkedin</NavLink>
-        <NavLink>instagram</NavLink>
-        <NavLink>twitter</NavLink>
+      <Box sx={{ marginTop: "3rem", display: "flex", flexDirection: "column" }}>
+        <Image src={deviLogo} sx={{ height: "3rem" }} />
+        <Box sx={{ marginTop: "1rem", display: "flex", flexDirection: "row" }}>
+          <NavLink>
+            <Text variant="Caption">People</Text>
+          </NavLink>
+          <li>
+            <NavLink>
+              <Text variant="Caption">Data & Privacy</Text>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink>
+              <Text variant="Caption">Manage Cookies</Text>
+            </NavLink>
+          </li>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          marginRight: "4rem",
+          marginTop: "3rem",
+          display: "flex",
+          flexDirection: "column",
+          "@media screen and (max-width: 40em)": {
+            marginBottom: "3rem",
+          },
+        }}
+      >
+        <Text variant="Caption">
+          Follow us on social media for regular updates.
+        </Text>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            gap: "2rem",
+            marginTop: "2rem",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Image src={inIcon} sx={{ height: "2rem" }} />
+          <Image src={insta} sx={{ height: "2rem" }} />
+          <Image src={twitter} sx={{ height: "2rem" }} />
+        </Box>
       </Box>
     </Box>
   );
+};
+
+const container = {
+  height: "15rem",
+  position: "fixed",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  bottom: "0",
+  width: "100%",
+  backgroundColor: "footer.footerBackground",
+  "@media screen and (max-width: 40em)": {
+    height: "20rem",
+    flexDirection: "column",
+  },
 };
 
 export default Footer;

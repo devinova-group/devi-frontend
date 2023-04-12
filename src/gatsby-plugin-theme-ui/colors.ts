@@ -74,6 +74,9 @@ const colors: Theme["colors"] = {
     blueShades: ["#3C6DA6", "#D4E1F2"],
     darkGreyShades: ["#5F5F5F", "#CECFD0"],
   },
+  footer: {
+    footerBackground: "#E2DEF2"
+  },
 
   check: {
     background: `url(${checkLightSvg}) no-repeat center center`,
@@ -159,6 +162,9 @@ const colors: Theme["colors"] = {
         borderColor: "#9794A0",
         background: `url(${checkDark}) no-repeat center center`,
         backgroundDisabled: `url(${checkDarkDisabled}) no-repeat center center`,
+      },
+      footer: {
+        footerBackground: "#271C4A"
       },
       radio: {
         background: `url(${radioDark}) no-repeat center center`,
